@@ -71,9 +71,11 @@ export function AlertCard({ title, description, priority, type, affectedDocs, so
               {affectedDocs.slice(0, 3).map((doc, index) => (
                 <div key={index} className="flex items-center justify-between text-xs">
                   <a 
-                    href={`#/help-center/${doc.toLowerCase().replace(/ /g, '-')}`}
+                    href={`https://help.liveplan.com/hc/en-us/articles/${doc.toLowerCase().replace(/ /g, '-')}`}
                     className="text-muted-foreground hover:text-foreground transition-colors truncate flex-1 cursor-pointer"
                     title={doc}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {doc}
                   </a>
@@ -81,7 +83,7 @@ export function AlertCard({ title, description, priority, type, affectedDocs, so
                     variant="ghost" 
                     size="sm" 
                     className="h-6 w-6 p-0 ml-2"
-                    onClick={() => window.open(`#/help-center/${doc.toLowerCase().replace(/ /g, '-')}`, '_blank')}
+                    onClick={() => window.open(`https://help.liveplan.com/hc/en-us/articles/${doc.toLowerCase().replace(/ /g, '-')}`, '_blank')}
                   >
                     <ExternalLink className="h-3 w-3" />
                   </Button>
