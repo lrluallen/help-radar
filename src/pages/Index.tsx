@@ -18,6 +18,7 @@ const Index = () => {
     { name: "Linear", status: 'connected' as const, lastSync: "2 min ago", itemCount: 23 },
     { name: "Monday.com", status: 'connected' as const, lastSync: "5 min ago", itemCount: 18 },
     { name: "Slack", status: 'warning' as const, lastSync: "1 hour ago", itemCount: 12 },
+    { name: "ZenDesk", status: 'connected' as const, lastSync: "3 min ago", itemCount: 31 },
     { name: "Google Calendar", status: 'pending' as const, lastSync: "Never", itemCount: 0 },
     { name: "HubSpot", status: 'error' as const, lastSync: "2 days ago", itemCount: 5 }
   ];
