@@ -70,8 +70,19 @@ export function AlertCard({ title, description, priority, type, affectedDocs, so
             <div className="space-y-1">
               {affectedDocs.slice(0, 3).map((doc, index) => (
                 <div key={index} className="flex items-center justify-between text-xs">
-                  <span className="text-muted-foreground truncate">{doc}</span>
-                  <Button variant="ghost" size="sm" className="h-6 w-6 p-0">
+                  <a 
+                    href={`#/help-center/${doc.toLowerCase().replace(/ /g, '-')}`}
+                    className="text-muted-foreground hover:text-foreground transition-colors truncate flex-1 cursor-pointer"
+                    title={doc}
+                  >
+                    {doc}
+                  </a>
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="h-6 w-6 p-0 ml-2"
+                    onClick={() => window.open(`#/help-center/${doc.toLowerCase().replace(/ /g, '-')}`, '_blank')}
+                  >
                     <ExternalLink className="h-3 w-3" />
                   </Button>
                 </div>
